@@ -1,0 +1,86 @@
+/* GuardianSurvivesEmo Mobile Responsive Styles */
+
+.guardian-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #111;
+  overflow-x: hidden;
+}
+
+/* Desktop Layout - Default */
+.desktop-layout {
+  display: flex;
+}
+
+.mobile-layout {
+  display: none;
+}
+
+/* Mobile Layout - Hidden by default, shown on mobile */
+@media (max-width: 768px) {
+  .desktop-layout {
+    display: none !important;
+  }
+  
+  .mobile-layout {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+}
+
+/* Text and Robot Container Styles */
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop-layout .text-container {
+  width: 50%;
+  padding: 0 2rem;
+}
+
+.mobile-layout .text-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.robot-container-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.desktop-layout .robot-container-wrapper {
+  width: 50%;
+}
+
+.mobile-layout .robot-container-wrapper {
+  width: 100%;
+  height: 60vh;
+}
+
+.text-box {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.robot-container {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(70px);
+}
+
+.desktop-layout .robot-container {
+  height: 100vh;
+}
+
+.mobile-layout .robot-container {
+  height: 100%;
+}

@@ -1,0 +1,145 @@
+/* PP Monument Extended Font Family */
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Thin-iF6702ae87a9efe.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-ThinItalic-iF6702ae87b31e6.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Light-iF6702ae876fbfd.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-LightItalic-iF6702ae877716d.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Regular-iF6702ae878aeeb.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Italic-iF6702ae8769758.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Book-iF6702ae874d4d8.otf') format('opentype');
+    font-weight: 450;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-BookItalic-iF6702ae8753b0f.otf') format('opentype');
+    font-weight: 450;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Medium-iF6702ae877d1e7.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-MediumItalic-iF6702ae8784913.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-SemiBold-iF6702ae87970ee.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-SemiBoldItalic-iF6702ae87a060d.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Bold-iF6702ae8740e07.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-BoldItalic-iF6702ae87471c5.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Heavy-iF6702ae875acac.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-HeavyItalic-iF6702ae8760cc0.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-Black-iF6702ae8733ec5.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Monument Extended';
+    src: url('./PPMonumentExtended-BlackItalic-iF6702ae873aaf3.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}

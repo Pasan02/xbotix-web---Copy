@@ -1,0 +1,16 @@
+
+.background-image-page {
+  width: 100vw;
+  min-height: 200vh; /* Make page scrollable - 2x viewport height */
+  background-image: url('../../public/assets/unnamed.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000; /* fallback color */
+  background-attachment: fixed; /* Keep background fixed while scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}

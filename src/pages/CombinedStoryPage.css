@@ -1,0 +1,197 @@
+/* Combined Story Page Container - Extended for scroll */
+.combined-story-page {
+  width: 100%;
+  height: 400vh; /* 4x viewport height for scroll-based animations */
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* First Section - Robot Background */
+.first-section.background-image-page {
+  background-image: url('/assets/unnamed.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Higher z-index to show first */
+  opacity: 1; /* Ensure it's visible initially */
+}
+
+/* Second Section - Earth Background */
+.second-section.fotor-background-page {
+  background-image: url('/assets/fotor_creation_2025-09-13.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Lower z-index initially */
+  opacity: 0; /* Start hidden */
+}
+
+/* Futuristic Dialog Box */
+.futuristic-dialogue-box {
+  position: fixed;
+  left: 2vw;
+  bottom: 2vw;
+  width: 320px;
+  height: 160px;
+  background: #181818;
+  clip-path: polygon(
+    10% 0%, 90% 0%, 
+    100% 10%, 100% 90%, 
+    90% 100%, 10% 100%, 
+    0% 90%, 0% 10%
+  );
+  border: 1.5px solid #ff3a3a;
+  box-shadow:
+    0 0 8px #ff3a3a,
+    0 0 16px rgba(255, 0, 0, 0.25),
+    inset 0 0 10px rgba(255, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.futuristic-dialogue-box::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  clip-path: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.25),
+    inset 0 0 6px rgba(255, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.futuristic-dialogue-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: inherit;
+  border: 1.5px solid rgba(255, 50, 50, 0.5);
+  animation: glowPulse 2s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 6px rgba(255, 50, 50, 0.18); }
+  to { box-shadow: 0 0 12px rgba(255, 0, 0, 0.35); }
+}
+
+/* Scroll-based laser beams */
+.scroll-laser-beam,
+.scroll-fotor-laser {
+  filter: blur(0.1px);
+}
+
+/* Animation classes for smooth transitions */
+.scroll-laser-beam,
+.scroll-fotor-laser,
+.futuristic-dialogue-box {
+  will-change: transform, opacity;
+}
+
+/* Earth glow effect overlay */
+.earth-glow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0; /* Start hidden */
+  background: radial-gradient(
+    ellipse 60% 40% at 50% 70%,
+    rgba(255, 50, 50, 0.3) 0%,
+    rgba(255, 100, 100, 0.15) 30%,
+    rgba(255, 150, 150, 0.08) 50%,
+    transparent 70%
+  );
+  filter: blur(2px);
+  mix-blend-mode: screen;
+}
+
+/* Message container */
+.message-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  opacity: 0; /* Start hidden */
+  width: auto;
+  max-width: 90vw;
+}
+
+/* Message text styling */
+.message-text {
+  color: #ffffff;
+  font-family: 'Menda Medium', 'PP Monument Extended', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 3rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  white-space: normal;
+  max-width: 90vw;
+  overflow: visible;
+  text-align: center;
+  display: block;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(30px); /* Start slightly below */
+}
+
+/* Join Mission Button styling */
+.join-mission-btn {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-family: 'Menda Medium', 'PP Monument Extended', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(30px); /* Start slightly below */
+  transition: all 0.3s ease;
+}
+
+.join-mission-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Make sure sections are properly stacked */
+.first-section,
+.second-section {
+  display: block;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .message-text {
+    font-size: 1.8rem;
+    max-width: 95vw;
+  }
+  
+  .join-mission-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

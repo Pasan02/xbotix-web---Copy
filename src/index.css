@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import brand fonts - Add these to your HTML head */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Xbotix Brand Variables */
+:root {
+  /* Brand Colors - STRICT ADHERENCE REQUIRED */
+  --xbotix-red: #e21a10;
+  --xbotix-black: #000000;
+  --xbotix-white: #ffffff;
+  
+  /* Typography Fonts */
+  --font-monument: 'PP Monument Extended', system-ui, sans-serif;
+  --font-menda: 'Menda', system-ui, sans-serif;
+  --font-bebas: 'Bebas Neue', cursive;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  
+  /* Brand Spacing Scale */
+  --space-brand-xs: 8px;
+  --space-brand-sm: 16px;
+  --space-brand-md: 24px;
+  --space-brand-lg: 32px;
+  --space-brand-xl: 48px;
+}
+
+@layer base {
+  /* Base styles following brand guidelines */
+  body {
+    @apply bg-xbotix-black text-xbotix-white font-raleway;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Typography Hierarchy - Brand Compliant */
+  h1 {
+    @apply font-monument text-xbotix-white;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  
+  h2 {
+    @apply font-monument text-xbotix-white;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  
+  h3 {
+    @apply font-bebas text-xbotix-white;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  
+  p {
+    @apply font-raleway text-xbotix-white;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Links - Brand Style */
+  a {
+    @apply text-xbotix-red hover:text-xbotix-white transition-colors duration-200;
+    text-decoration: underline;
+    text-decoration-color: var(--xbotix-red);
+  }
+  
+  a:hover {
+    text-decoration-color: var(--xbotix-white);
+  }
+}
+
+@layer components {
+  /* Brand Button Components */
+  .btn-primary {
+    @apply bg-xbotix-red text-xbotix-white font-montserrat;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #c41a10; /* Slightly darker red */
+    transform: translateY(-1px);
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-xbotix-white font-montserrat;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid var(--xbotix-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-xbotix-white text-xbotix-black;
+  }
+  
+  /* Brand Card Component */
+  .card {
+    @apply bg-xbotix-black text-xbotix-white;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #333333;
+  }
+  
+  .card-title {
+    @apply text-xbotix-red font-bebas;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  /* Form Components - Brand Style */
+  .form-input {
+    @apply bg-xbotix-black text-xbotix-white font-raleway;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-input:focus {
+    border-color: var(--xbotix-red);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(226, 26, 16, 0.2);
+  }
+  
+  .form-input::placeholder {
+    color: #666666;
+  }
+  
+  /* Brand Container */
+  .container-brand {
+    @apply mx-auto bg-xbotix-black min-h-screen;
+    max-width: 1200px;
+    padding: var(--space-brand-lg);
+  }
+  
+  /* Brand Section Spacing */
+  .section-brand {
+    padding: var(--space-brand-xl) 0;
+  }
+  
+  /* Brand Accent Elements */
+  .accent-red {
+    color: var(--xbotix-red);
+  }
+  
+  .accent-border {
+    border-left: 4px solid var(--xbotix-red);
+    padding-left: var(--space-brand-md);
+  }
+  
+  /* Icon Styles */
+  .icon-brand {
+    width: 24px;
+    height: 24px;
+    color: var(--xbotix-white);
+  }
+  
+  .icon-brand.red {
+    color: var(--xbotix-red);
+  }
+  
+  /* Typography Utilities */
+  .text-h1 {
+    @apply font-monument;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+  
+  .text-h2 {
+    @apply font-monument;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+  
+  .text-h3 {
+    @apply font-bebas;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  
+  .text-body {
+    @apply font-raleway;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  .text-caption {
+    @apply font-montserrat;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  
+  /* Legacy component updates for brand compliance */
+  code {
+    @apply font-montserrat bg-xbotix-black text-xbotix-red;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  main {
+    @apply container-brand;
+  }
+  
+  button {
+    @apply btn-primary;
+  }
+}
+
+@layer utilities {
+  /* Brand Utility Classes */
+  .bg-brand-black { background-color: var(--xbotix-black); }
+  .bg-brand-white { background-color: var(--xbotix-white); }
+  .bg-brand-red { background-color: var(--xbotix-red); }
+  
+  .text-brand-black { color: var(--xbotix-black); }
+  .text-brand-white { color: var(--xbotix-white); }
+  .text-brand-red { color: var(--xbotix-red); }
+  
+  .border-brand-red { border-color: var(--xbotix-red); }
+  .border-brand-white { border-color: var(--xbotix-white); }
+  
+  /* Spacing utilities */
+  .p-brand-xs { padding: var(--space-brand-xs); }
+  .p-brand-sm { padding: var(--space-brand-sm); }
+  .p-brand-md { padding: var(--space-brand-md); }
+  .p-brand-lg { padding: var(--space-brand-lg); }
+  .p-brand-xl { padding: var(--space-brand-xl); }
+  
+  .m-brand-xs { margin: var(--space-brand-xs); }
+  .m-brand-sm { margin: var(--space-brand-sm); }
+  .m-brand-md { margin: var(--space-brand-md); }
+  .m-brand-lg { margin: var(--space-brand-lg); }
+  .m-brand-xl { margin: var(--space-brand-xl); }
+}
+
+/* Brand-specific animations */
+@keyframes brand-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(226, 26, 16, 0.7);
+  }
+  50% { 
+    box-shadow: 0 0 0 10px rgba(226, 26, 16, 0);
+  }
+}
+
+.pulse-red {
+  animation: brand-pulse 2s infinite;
+}

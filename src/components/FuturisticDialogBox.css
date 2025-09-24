@@ -1,0 +1,54 @@
+
+.futuristic-dialogue-box {
+  position: fixed;
+  left: 2vw;
+  bottom: 2vw;
+  width: 320px;
+  height: 160px;
+  background: #181818;
+  clip-path: polygon(
+    10% 0%, 90% 0%, 
+    100% 10%, 100% 90%, 
+    90% 100%, 10% 100%, 
+    0% 90%, 0% 10%
+  );
+  border: 1.5px solid #ff3a3a;
+  box-shadow:
+    0 0 8px #ff3a3a,
+    0 0 16px rgba(255, 0, 0, 0.25),
+    inset 0 0 10px rgba(255, 0, 0, 0.15);
+  z-index: 10;
+}
+
+
+.futuristic-dialogue-box::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  clip-path: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 4px rgba(255, 255, 255, 0.25),
+    inset 0 0 6px rgba(255, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+
+.futuristic-dialogue-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: inherit;
+  border: 1.5px solid rgba(255, 50, 50, 0.5);
+  animation: glowPulse 2s infinite alternate;
+  pointer-events: none;
+}
+
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 6px rgba(255, 50, 50, 0.18); }
+  to { box-shadow: 0 0 12px rgba(255, 0, 0, 0.35); }
+}
